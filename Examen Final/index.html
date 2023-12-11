@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--titre + ajout des scripts-->
+        <title>Coordonnées</title>
+        <link rel="stylesheet" href ="style.css"/>
+        <script rel="JavaScript" href="inscription.js"></script>
+    </head>
+<body>
+    <form onsubmit ="return validateForm()">
+    <fieldset>
+        <legend><h2>Vos Coordonnées</h2></legend>
+        <!--Demande d'entrer les coordonnées de la personne-->
+        <label for="prenom">Prénom:</label>
+         <input type="text" id="prenom" name="prenom" placeholder="votre Prénom" required="required"><br>
+        <label for="nom">Nom:</label>
+         <input type="text" id="nom" name="nom" placeholder="votre Nom"required="required"><br>
+        <label for="date">Date de naissance:</label>
+         <input type="date" id="date" name="date"required="required"><br>
+        <label for="email">Email:</label>
+         <input type="email" id="email" name="email" placeholder="Votre Email"required="required"><br>
+        <label for="site">Votre Site:</label>
+         <input type="url" id="site" name="site"required="required"><br>
+        <label for="code">Code:</label>
+         <input type="text" id="code" name="code"required="required"><br>
+         <!-- radio button pour le genre-->
+        <label for="genre"required="required">Genre:</label>
+         <input type="radio" id="homme" name="genre" value="homme">
+        <label for="homme">Homme</label>
+         <input type="radio" id="femme" name="genre" value="femme">
+        <label for="femme">Femme</label><br>
+        <!-- selected pour le pays-->
+        <label for="pays">Pays:</label>
+        <div>
+            <!--option des pays disponibles-->
+            <select id="pays" name="pays"required="required">
+                    <option value="" disabled selected>Votre pays</option>
+                <optgroup label ="Afrique">
+                    <option value="Tunis">Tunis</option>
+                    <option value="Algerie">Algérie</option>
+                    <option value="Maroc">Maroc</option>
+                    <option value="Mauritanie">Mauritanie</option>
+                </optgroup>
+                <optgroup label = "Europe">
+                    <option value="France">France</option>
+                    <option value="Belgique">Belgique</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Allemagne">Allemagne</option>
+                </optgroup>
+                <optgroup label = "Amérique">
+                    <option value="fr">Fr</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Argentine">Argentine</option>
+                </optgroup>
+                <optgroup label ="Autres">
+                    <option value="Europe">Europe</option>
+                    <option value="Asie">Asie</option>
+                    <option value="Ameriques">Amériques</option>
+                    <option value="Océanie">Océanie</option>
+                </optgroup>
+            </select>
+         </div>
+    </fieldset>
+    <fieldset>
+        <!--checkbox pour la formation + textarea-->
+        <legend><h2>Vos Formations</h2></legend>
+        <input type="checkbox" id="html5" name="education" value="HTML5">
+        <label for="html5">HTML5</label><br>
+        <input type="checkbox" id="css3" name="education" value="CSS3">
+        <label for="css3">CSS3</label><br>
+        <input type="checkbox" id="js" name="education" value="JS">
+        <label for="js">JavaScript</label><br>
+        <textarea id="needs" name="formation" rows="5" cols="50" placeholder="Décrivez vos besoins en formation"required="required"></textarea>
+    </fieldset>
+    <fieldset>
+        <!--Ajout de la photo + Effacer et Envoyer -->
+        <legend><h2>Envoyer nous votre photo</h2></legend>
+        <input type="file" id="photo" name="photo" size ="10000"required="required"><br>
+        <input type="reset" value="Effacer">
+        <input type="submit" value="Envoyer">
+    </fieldset>
+    </form>
+</body>
+</html>
